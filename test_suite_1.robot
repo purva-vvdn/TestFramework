@@ -14,6 +14,5 @@ Verify Example Content
     Element Should Be Visible    xpath://h1[contains(text(), 'Example Domain')]
     [Teardown]    Close Browser
 
-Verify Example Content1
-    
+Verify Example Content1    
     Log To Console    Example Domain
