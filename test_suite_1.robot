@@ -16,4 +16,4 @@ Verify Example Content
 
 Verify Example Content1
     
-    Log to console    'Example Domain'
+    Log To Console    Example Domain
