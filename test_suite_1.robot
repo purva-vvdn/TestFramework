@@ -2,8 +2,6 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${URL}    https://example.com
-${SLEEP}    3
-${BROWSER}    chrome
 
 *** Keywords ***
 Open Browser to Example
