@@ -2,9 +2,9 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${URL}    https://example.com
-${SLEEP}    3
-${BROWSER}    chrome
+${URL}       https://example.com
+${SLEEP}     3
+${BROWSER}   chrome
 
 *** Keywords ***
 Open Browser to Example
@@ -19,19 +19,16 @@ Open Browser to Example
     Run Keyword If    ${warn}    Click Element    xpath=//*[@id="details-button"]
     Run Keyword If    ${warn}    Click Element    xpath=//*[@id="proceed-link"]
 
-Open Browser to Example
-Open Browser    ${URL}    chrome
-Title Should Be    Example Domain
-[Teardown]    Close Browser
-
-Verify Example Content
+*** Test Cases ***
 Verify Example Domain Title
     [Setup]    Open Browser to Example
     Title Should Be    Example Domain
     [Teardown]    Close Browser
 
-Element Should Be Visible    xpath://h1[contains(text(), 'Example Domain')]
-[Teardown]    Close Browser
+Verify Example Content
+    [Setup]    Open Browser to Example
+    Element Should Be Visible    xpath=//h1[contains(text(), 'Example Domain')]
+    [Teardown]    Close Browser
 
-Verify Example Content1
-Log To Console    Example Domain
+Verify Example Content Log
+    Log To Console    Example Domain
