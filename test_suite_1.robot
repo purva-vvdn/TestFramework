@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     A test suite with a single test for New Tab
 ...               Created by 'Robotcorder'
-Library           SeleniumLibrary    timeout=10
+Library           SeleniumLibrary
 
 *** Variables ***
 ${BROWSER}        chrome
