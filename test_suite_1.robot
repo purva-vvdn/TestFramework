@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     A test suite with a single test for New Tab
 ...               Created By ' Robotcorder
-Library           Selenium2Library    timeout=10
+Library           SeleniumLibrary    timeout=10
 
 *** Variables ***
 ${APjFqb_textarea}    youtube
