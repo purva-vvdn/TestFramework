@@ -4,7 +4,6 @@ Documentation     A test suite with a single test for New Tab
 Library           SeleniumLibrary    timeout=10
 
 *** Variables ***
-${APjFqb_textarea}    youtube
 ${SLEEP}     3
 ${BROWSER}   chrome
 
@@ -22,13 +21,11 @@ Open Browser to Example
     Run Keyword If    ${warn}    Click Element    xpath=//*[@id="proceed-link"]
 
 *** Test Cases ***
-New Tab test
-    Wait Until Keyword Succeeds    1 min    5 seconds    Open Browser    chrome://newtab/    ${BROWSER}
+New Tab Test
+    [Documentation]    Test case to open a new tab and click an element
+    Open Browser to Example    chrome://newtab/
     Sleep    ${SLEEP}
-    Wait Until Keyword Succeeds    1 min    5 seconds    Wait Until Page Contains Element    //textarea[@id="APjFqb"]
-    Wait Until Keyword Succeeds    1 min    5 seconds    Input Text    //textarea[@id="APjFqb"]    ${APjFqb_textarea}
-    Sleep    ${SLEEP}
-    Wait Until Keyword Succeeds    1 min    5 seconds    Wait Until Page Contains Element    //h3[@class="LC20lb MBeuO DKV0Md"]
-    Wait Until Keyword Succeeds    1 min    5 seconds    Click Element    //h3[@class="LC20lb MBeuO DKV0Md"]
+    Wait Until Page Contains Element    //h3[@class="LC20lb MBeuO DKV0Md"]
+    Click Element    //h3[@class="LC20lb MBeuO DKV0Md"]
     Sleep    ${SLEEP}
     Close Browser
