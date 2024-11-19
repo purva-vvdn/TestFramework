@@ -1,19 +1,18 @@
 *** Settings ***
 Documentation     A test suite with a single test for New Tab
-...               Created by 'Robotcorder'
+...               Created By ' Robotcorder
 Library           SeleniumLibrary    timeout=10
 
 *** Variables ***
-${BROWSER}        chrome
-${SLEEP}          3
-${URL}            chrome://newtab/
-${ELEMENT_XPATH}  //h3[@class="LC20lb MBeuO DKV0Md"]
+${BROWSER}    headlesschrome
+${SLEEP}    3
 
 *** Test Cases ***
-New Tab Test
-    Open Browser    ${URL}    ${BROWSER}    options=--headless,--disable-gpu
-    Sleep           ${SLEEP}
-    Wait Until Page Contains Element    ${ELEMENT_XPATH}    timeout=1 min
-    Click Element   ${ELEMENT_XPATH}
-    Sleep           ${SLEEP}
+New Tab test
+    Wait Until Keyword Succeeds    1 min    5 seconds    Open Browser    chrome://newtab/    ${BROWSER}
+    Sleep    ${SLEEP}
+    Wait Until Keyword Succeeds    1 min    5 seconds    Wait Until Page Contains Element    //h3[@class="LC20lb MBeuO DKV0Md"]
+    Wait Until Keyword Succeeds    1 min    5 seconds    Click Element    //h3[@class="LC20lb MBeuO DKV0Md"]
+    Sleep    ${SLEEP}
+
     Close Browser
