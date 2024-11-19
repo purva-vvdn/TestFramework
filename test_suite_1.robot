@@ -8,20 +8,6 @@ ${APjFqb_textarea}    youtube
 ${SLEEP}     3
 ${BROWSER}   chrome
 
-*** Test Cases ***
-New Tab test
-    Wait Until Keyword Succeeds    1 min    5 seconds    Open Browser    chrome://newtab/    ${BROWSER}
-    Sleep    ${SLEEP}
-    Wait Until Keyword Succeeds    1 min    5 seconds    Wait Until Page Contains Element    //textarea[@id="APjFqb"]
-    Wait Until Keyword Succeeds    1 min    5 seconds    Input Text    //textarea[@id="APjFqb"]    ${APjFqb_textarea}
-    Sleep    ${SLEEP}
-    Wait Until Keyword Succeeds    1 min    5 seconds    Wait Until Page Contains Element    //h3[@class="LC20lb MBeuO DKV0Md"]
-    Wait Until Keyword Succeeds    1 min    5 seconds    Click Element    //h3[@class="LC20lb MBeuO DKV0Md"]
-    Sleep    ${SLEEP}
-
-    Close Browser
-
-
 *** Keywords ***
 Open Browser to Example
     [Arguments]    ${headless}=True
@@ -34,3 +20,15 @@ Open Browser to Example
     ${warn}=    Run Keyword And Return Status    Page Should Contain Element    xpath=//*[@id="details-button"]
     Run Keyword If    ${warn}    Click Element    xpath=//*[@id="details-button"]
     Run Keyword If    ${warn}    Click Element    xpath=//*[@id="proceed-link"]
+
+*** Test Cases ***
+New Tab test
+    Wait Until Keyword Succeeds    1 min    5 seconds    Open Browser    chrome://newtab/    ${BROWSER}
+    Sleep    ${SLEEP}
+    Wait Until Keyword Succeeds    1 min    5 seconds    Wait Until Page Contains Element    //textarea[@id="APjFqb"]
+    Wait Until Keyword Succeeds    1 min    5 seconds    Input Text    //textarea[@id="APjFqb"]    ${APjFqb_textarea}
+    Sleep    ${SLEEP}
+    Wait Until Keyword Succeeds    1 min    5 seconds    Wait Until Page Contains Element    //h3[@class="LC20lb MBeuO DKV0Md"]
+    Wait Until Keyword Succeeds    1 min    5 seconds    Click Element    //h3[@class="LC20lb MBeuO DKV0Md"]
+    Sleep    ${SLEEP}
+    Close Browser
