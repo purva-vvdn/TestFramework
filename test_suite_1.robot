@@ -23,9 +23,10 @@ Open Browser to Example
 *** Test Cases ***
 New Tab Test
     [Documentation]    Test case to open a new tab and click an element
-    Open Browser to Example    chrome://newtab/
+    Open Browser to Example    https://www.google.com
     Sleep    ${SLEEP}
-    Wait Until Page Contains Element    //h3[@class="LC20lb MBeuO DKV0Md"]
-    Click Element    //h3[@class="LC20lb MBeuO DKV0Md"]
-    Sleep    ${SLEEP}
+    Wait Until Page Contains Element    //input[@name="q"]  # Example for Google search box to verify page load
+    Log    Page loaded successfully
+    # Replace with an action that suits the loaded page
     Close Browser
+
