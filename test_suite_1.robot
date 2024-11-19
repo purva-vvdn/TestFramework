@@ -1,23 +1,25 @@
-Library    SeleniumLibrary
+*** Settings ***
+Documentation     A test suite with a single test for New Tab
+...               Created By ' Robotcorder
+Library           Selenium2Library    timeout=10
 
 *** Variables ***
-${URL}    https://example.com
+${APjFqb_textarea}    youtube
 ${SLEEP}     3
 ${BROWSER}   chrome
 
 *** Test Cases ***
-Open Browser to Example
-    Open Browser    ${URL}    chrome
-    Title Should Be    Example Domain
-    [Teardown]    Close Browser
+New Tab test
+    Wait Until Keyword Succeeds    1 min    5 seconds    Open Browser    chrome://newtab/    ${BROWSER}
+    Sleep    ${SLEEP}
+    Wait Until Keyword Succeeds    1 min    5 seconds    Wait Until Page Contains Element    //textarea[@id="APjFqb"]
+    Wait Until Keyword Succeeds    1 min    5 seconds    Input Text    //textarea[@id="APjFqb"]    ${APjFqb_textarea}
+    Sleep    ${SLEEP}
+    Wait Until Keyword Succeeds    1 min    5 seconds    Wait Until Page Contains Element    //h3[@class="LC20lb MBeuO DKV0Md"]
+    Wait Until Keyword Succeeds    1 min    5 seconds    Click Element    //h3[@class="LC20lb MBeuO DKV0Md"]
+    Sleep    ${SLEEP}
 
-Verify Example Content
-    [Setup]    Open Browser to Example
-    Element Should Be Visible    xpath://h1[contains(text(), 'Example Domain')]
-    [Teardown]    Close Browser
-
-Verify Example Content1    
-    Log To Console    Example Domain
+    Close Browser
 
 
 *** Keywords ***
