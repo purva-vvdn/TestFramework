@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.9.2 on linux)" generated="2024-11-21T04:24:45.767970" rpa="false" schemaversion="5">
+<suite id="s1" name="Smartfit" source="/app/Smartfit">
+<suite id="s1-s1" name="Smartfit" source="/app/Smartfit/Smartfit">
+<suite id="s1-s1-s1" name="VVDN Icon" source="/app/Smartfit/Smartfit/VVDN_Icon">
+<suite id="s1-s1-s1-s1" name="TestCases" source="/app/Smartfit/Smartfit/VVDN_Icon/TestCases">
+<suite id="s1-s1-s1-s1-s1" name="Main file" source="/app/Smartfit/Smartfit/VVDN_Icon/TestCases/Main_file.robot">
+<kw name="Open My Browser" owner="inital_setup" type="SETUP">
+<kw name="Setup Chrome Driver" owner="setup">
+<msg time="2024-11-21T04:24:46.546081" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2024-11-21T04:24:47.045301" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-11-21T04:24:47.188874" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-11-21T04:24:47.303961" level="INFO">There is no [linux64] chromedriver "131.0.6778.85" for browser google-chrome "131.0.6778" in cache</msg>
+<msg time="2024-11-21T04:24:47.304318" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-11-21T04:24:47.455844" level="INFO">WebDriver version 131.0.6778.85 selected</msg>
+<msg time="2024-11-21T04:24:47.462851" level="INFO">Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.85/linux64/chromedriver-linux64.zip</msg>
+<msg time="2024-11-21T04:24:47.463153" level="INFO">About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.85/linux64/chromedriver-linux64.zip</msg>
+<msg time="2024-11-21T04:24:47.790615" level="INFO">Driver downloading response is 200</msg>
+<msg time="2024-11-21T04:24:48.167766" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-11-21T04:24:48.503107" level="INFO">Driver has been saved in cache [/root/.wdm/drivers/chromedriver/linux64/131.0.6778.85]</msg>
+<status status="PASS" start="2024-11-21T04:24:46.545543" elapsed="3.053220"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:24:49.601805" level="INFO">Opening url 'https://ice2.vvdnice.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-21T04:24:49.600489" elapsed="4.654852"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-21T04:24:54.256159" elapsed="0.033389"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${verify_login_page_1}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:24:54.290280" elapsed="0.370347"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:24:46.543537" elapsed="8.118390"/>
+</kw>
+<test id="s1-s1-s1-s1-s1-t1" name="Tc_1 Forgot password test" line="11">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-11-21T04:24:54.664588" elapsed="0.000708"/>
+</kw>
+<kw name="Forgot_password" owner="Login_cases">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Forgot password}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:24:54.667061" elapsed="1.040820"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:24:54.666008" elapsed="1.042357"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:24:54.662429" elapsed="1.046480"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t2" name="Tc_2 Forgot passowrd page test" line="14">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-11-21T04:24:55.711105" elapsed="0.000774"/>
+</kw>
+<kw name="Verify_Forgot_password_page" owner="Login_cases">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Forgot password}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:24:55.713525" elapsed="1.021222"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:24:56.736527" level="INFO">Clicking element '//span[text()='Forgot Password? ']'.</msg>
+<arg>${Forgot password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:24:56.735683" elapsed="2.219558"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${verify_forgot password_page}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:24:58.956042" elapsed="1.024719"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${reset_password_cancel}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:24:59.981599" elapsed="1.026906"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:01.009644" level="INFO">Clicking element '//span[text()=' Cancel ']'.</msg>
+<arg>${reset_password_cancel}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:01.009072" elapsed="2.192824"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:24:55.712588" elapsed="7.489801"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:24:55.709749" elapsed="7.493170"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t3" name="Tc_3 Login" line="17">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-11-21T04:25:03.204878" elapsed="0.000765"/>
+</kw>
+<kw name="Login_cases_to_dashboard" owner="Login_cases">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${UserName_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-21T04:25:03.207256" elapsed="2.066711"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:05.275574" level="INFO">Typing text 'tenant@vvdntech.in' into text field '//input[@id="username-input"]'.</msg>
+<arg>${UserName_xpath}</arg>
+<arg>${User_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:05.274876" elapsed="3.246313"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Passward_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-21T04:25:08.522111" elapsed="2.053741"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:10.578123" level="INFO">Typing password into text field '//input[@id="password-input"]'.</msg>
+<msg time="2024-11-21T04:25:12.657422" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${Passward_xpath}</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:10.576878" elapsed="3.208910"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:13.787727" level="INFO">Clicking element '//span[text()="Login"]'.</msg>
+<arg>${Login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:13.786772" elapsed="2.177573"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Verify_Login}</arg>
+<arg>1000</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:25:15.965388" elapsed="2.472731"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:25:03.206310" elapsed="15.232318"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:25:03.203614" elapsed="15.235500"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t4" name="Tc_4 HomepageDashbaord_Validation" line="21">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-11-21T04:25:18.441462" elapsed="0.000725"/>
+</kw>
+<kw name="Homepage" owner="Dashboard">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${homepage}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:25:18.443748" elapsed="1.026335"/>
+</kw>
+<doc>Navigate to the Homepage and ensure it is loaded.</doc>
+<status status="PASS" start="2024-11-21T04:25:18.442848" elapsed="1.027921"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:25:18.440033" elapsed="1.031366"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t5" name="Tc_5 HomepageCustomer_Validation" line="24">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-11-21T04:25:19.473582" elapsed="0.000769"/>
+</kw>
+<kw name="Customers" owner="Dashboard">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:19.477100" level="INFO">Clicking element '//span[text()='Customers']'.</msg>
+<arg>${Customers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:19.475988" elapsed="2.431660"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Customers_Page}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:25:21.908570" elapsed="1.033334"/>
+</kw>
+<doc>Navigate to the Customers section and ensure it is loaded.</doc>
+<status status="PASS" start="2024-11-21T04:25:19.475076" elapsed="3.467426"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:25:19.472179" elapsed="3.470943"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t6" name="Tc_6 HomepageAssets_Validation" line="27">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-11-21T04:25:22.945765" elapsed="0.000876"/>
+</kw>
+<kw name="Assets" owner="Dashboard">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:22.949520" level="INFO">Clicking element '//span[text()='Assets']'.</msg>
+<arg>${Assets}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:22.948670" elapsed="2.354420"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Assets_Page}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:25:25.303894" elapsed="1.030936"/>
+</kw>
+<doc>Navigate to the Assets section and ensure it is loaded.</doc>
+<status status="PASS" start="2024-11-21T04:25:22.947403" elapsed="3.387870"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:25:22.944104" elapsed="3.391679"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t7" name="Tc_7 HomepageDashboard_Validation" line="33">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-11-21T04:25:26.337875" elapsed="0.000825"/>
+</kw>
+<kw name="Dashboards" owner="Dashboard">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:26.341541" level="INFO">Clicking element '//span[text()='Dashboards']'.</msg>
+<arg>${Dashboards}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:26.340757" elapsed="2.446403"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Dashboards_Page}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:25:28.788036" elapsed="1.028095"/>
+</kw>
+<doc>Navigate to the Dashboards section and ensure it is loaded.</doc>
+<status status="PASS" start="2024-11-21T04:25:26.339532" elapsed="3.477186"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:25:26.336426" elapsed="3.480851"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t8" name="Tc_8 Create Customer" line="71">
+<kw name="Open Customer" owner="Customer_creation_delete">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:25:29.821941" level="INFO">Opening Customer Section</msg>
+<arg>Opening Customer Section</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:25:29.821206" elapsed="0.000915"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Opening Customer Section</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:25:29.822760" elapsed="0.000599"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:29.824881" level="INFO">Clicking element '//span[text()='Customers']'.</msg>
+<arg>${Customers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:29.823962" elapsed="2.315812"/>
+</kw>
+<doc>Navigate to the Customer section and ensure it is loaded.</doc>
+<status status="PASS" start="2024-11-21T04:25:29.819939" elapsed="2.320372"/>
+</kw>
+<kw name="Create Customer" owner="Customer_creation_delete">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:25:32.143331" level="INFO">Creating a new customer</msg>
+<arg>Creating a new customer</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:25:32.142755" elapsed="0.000763"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Creating a new customer</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:25:32.144065" elapsed="0.000427"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:32.145617" level="INFO">Clicking element '(//button[@mattooltipposition='above'])[3]'.</msg>
+<arg>${add_customer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:32.145018" elapsed="2.525177"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:25:34.671683" level="INFO">Clicking title input field</msg>
+<arg>Clicking title input field</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:25:34.670993" elapsed="0.000840"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Clicking title input field</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:25:34.672326" elapsed="0.000506"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:34.673892" level="INFO">Clicking element '//input[@formcontrolname='title']'.</msg>
+<arg>${title_input_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:34.673272" elapsed="2.240667"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:25:36.915872" level="INFO">Inputting customer title</msg>
+<arg>Inputting customer title</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:25:36.914979" elapsed="0.001077"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Inputting customer title</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:25:36.916664" elapsed="0.000572"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:36.918536" level="INFO">Typing text 'Jon Doe' into text field '//input[@formcontrolname='title']'.</msg>
+<arg>${title_input_field}</arg>
+<arg>${customer_created_title_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:36.917750" elapsed="3.258722"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:25:40.178230" level="INFO">Inputting description</msg>
+<arg>Inputting description</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:25:40.177338" elapsed="0.001042"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Inputting description</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:25:40.179022" elapsed="0.000645"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:40.181554" level="INFO">Clicking element '//textarea[@formcontrolname='description']'.</msg>
+<arg>${description_input_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:40.180274" elapsed="2.218293"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:42.400390" level="INFO">Typing text 'test description' into text field '//textarea[@formcontrolname='description']'.</msg>
+<arg>${description_input_field}</arg>
+<arg>test description</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:42.399430" elapsed="3.239242"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:25:45.640184" level="INFO">Selecting country</msg>
+<arg>Selecting country</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:25:45.639343" elapsed="0.000944"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Selecting country</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:25:45.640631" elapsed="0.000483"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:45.642211" level="INFO">Clicking element '(//mat-select[@formcontrolname='country'])[1]'.</msg>
+<arg>${country_selection}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:45.641583" elapsed="2.245124"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:47.888522" level="INFO">Clicking element '//span[text()=' Afghanistan ']'.</msg>
+<arg>${random_country_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:47.887614" elapsed="2.184302"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:25:50.073579" level="INFO">Inputting city</msg>
+<arg>Inputting city</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:25:50.072831" elapsed="0.000940"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Inputting city</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:25:50.074378" elapsed="0.000467"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:50.075845" level="INFO">Clicking element '//input[@formcontrolname='city']'.</msg>
+<arg>${city_input_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:50.075252" elapsed="2.208283"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:52.285021" level="INFO">Typing text 'Herat' into text field '//input[@formcontrolname='city']'.</msg>
+<arg>${city_input_field}</arg>
+<arg>Herat</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:52.284347" elapsed="3.177466"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:25:55.463479" level="INFO">Inputting state</msg>
+<arg>Inputting state</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:25:55.462710" elapsed="0.000929"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Inputting state</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:25:55.464111" elapsed="0.000424"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:55.465577" level="INFO">Clicking element '//input[@formcontrolname='state']'.</msg>
+<arg>${state_province_input_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:55.464958" elapsed="2.168687"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:25:57.635515" level="INFO">Typing text 'Farah' into text field '//input[@formcontrolname='state']'.</msg>
+<arg>${state_province_input_field}</arg>
+<arg>Farah</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:25:57.634594" elapsed="3.138404"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:26:00.774631" level="INFO">Inputting postal code</msg>
+<arg>Inputting postal code</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:26:00.773893" elapsed="0.000901"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Inputting postal code</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:26:00.775254" elapsed="0.000395"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:00.776609" level="INFO">Clicking element '//input[@formcontrolname='zip']'.</msg>
+<arg>${zip_postalcode_input_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:00.776059" elapsed="2.143796"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:02.922074" level="INFO">Typing text '123456' into text field '//input[@formcontrolname='zip']'.</msg>
+<arg>${zip_postalcode_input_field}</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:02.920833" elapsed="3.124236"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:26:06.046122" level="INFO">Inputting address</msg>
+<arg>Inputting address</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:26:06.045654" elapsed="0.000555"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Inputting address</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:26:06.046483" elapsed="0.000275"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:06.047345" level="INFO">Clicking element '//input[@formcontrolname='address']'.</msg>
+<arg>${address1_input_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:06.047005" elapsed="2.139879"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:08.188423" level="INFO">Typing text '123 main st' into text field '//input[@formcontrolname='address']'.</msg>
+<arg>${address1_input_field}</arg>
+<arg>123 main st</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:08.187629" elapsed="3.166578"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:26:11.355519" level="INFO">Inputting phone number</msg>
+<arg>Inputting phone number</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:26:11.354941" elapsed="0.000683"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Inputting phone number</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:26:11.356128" elapsed="0.000357"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:11.357175" level="INFO">Clicking element '//input[@formcontrolname='phoneNumber']'.</msg>
+<arg>${phone_number_input_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:11.356791" elapsed="2.157048"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:13.515664" level="INFO">Typing text '+12015550112' into text field '//input[@formcontrolname='phoneNumber']'.</msg>
+<arg>${phone_number_input_field}</arg>
+<arg>+12015550112</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:13.514829" elapsed="3.271925"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:26:16.788057" level="INFO">Inputting email</msg>
+<arg>Inputting email</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:26:16.787474" elapsed="0.000714"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Inputting email</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:26:16.788639" elapsed="0.000406"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:16.789773" level="INFO">Clicking element '//input[@formcontrolname='email']'.</msg>
+<arg>${email_input_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:16.789344" elapsed="2.148400"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:18.939220" level="INFO">Typing text 'test@vvdntest.com' into text field '//input[@formcontrolname='email']'.</msg>
+<arg>${email_input_field}</arg>
+<arg>test@vvdntest.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:18.938485" elapsed="3.206850"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:26:22.146350" level="INFO">Clicking submit button (using JavaScript)</msg>
+<arg>Clicking submit button (using JavaScript)</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:26:22.145922" elapsed="0.000535"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Clicking submit button (using JavaScript)</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:26:22.146745" elapsed="0.000276"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:22.147897" level="INFO">Executing JavaScript:
+Array.from(document.querySelectorAll('button.mat-primary')).find(el =&gt; el.textContent.includes(' Add ')).click()
+Without any arguments.</msg>
+<arg>Array.from(document.querySelectorAll('button.mat-primary')).find(el =&gt; el.textContent.includes(' Add ')).click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-11-21T04:26:22.147290" elapsed="1.052727"/>
+</kw>
+<doc>To create a new customer.</doc>
+<status status="PASS" start="2024-11-21T04:25:32.141431" elapsed="51.058887"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:25:29.818259" elapsed="53.382391"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t9" name="Tc_9 Search Customer" line="75">
+<kw name="Search Customer" owner="Customer_creation_delete">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:26:23.202963" level="INFO">Searching for customer</msg>
+<arg>Searching for customer</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:26:23.202577" elapsed="0.000483"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Searching for customer</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:26:23.203320" elapsed="0.000359"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-21T04:26:25.204419" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-21T04:26:23.203959" elapsed="2.000752"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2024-11-21T04:26:25.205183" elapsed="2.304537"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:26:27.510700" level="INFO">Waiting for search button</msg>
+<arg>Waiting for search button</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:26:27.510232" elapsed="0.000572"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Waiting for search button</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:26:27.511073" elapsed="0.000272"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${search_button_on_customer_page}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:26:27.511653" elapsed="1.021955"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:28.534937" level="INFO">Clicking element '(//button/span[@class='mat-button-wrapper'])[8]'.</msg>
+<arg>${search_button_on_customer_page}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:28.534310" elapsed="2.156008"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:26:30.691491" level="INFO">Inputting customer name in search</msg>
+<arg>Inputting customer name in search</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:26:30.690925" elapsed="0.000704"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Inputting customer name in search</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:26:30.692088" elapsed="0.000564"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:30.693524" level="INFO">Clicking element '//input[@data-placeholder='Search customers']'.</msg>
+<arg>${search_customer_input_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:30.693076" elapsed="2.139914"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:32.834586" level="INFO">Typing text 'Jon Doe' into text field '//input[@data-placeholder='Search customers']'.</msg>
+<arg>${search_customer_input_field}</arg>
+<arg>${customer_created_title_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:32.833739" elapsed="3.178173"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//span[text()="${customer_created_title_name}"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:26:36.012906" elapsed="1.027011"/>
+</kw>
+<doc>Search for a customer by name.</doc>
+<status status="PASS" start="2024-11-21T04:26:23.201952" elapsed="13.838445"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:26:23.201070" elapsed="13.839847"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t10" name="Tc_10 Delete Customer" line="78">
+<kw name="Delete Customer" owner="Customer_creation_delete">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:26:37.044335" level="INFO">Deleting customer</msg>
+<arg>Deleting customer</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:26:37.043832" elapsed="0.000669"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Deleting customer</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:26:37.044904" elapsed="0.000334"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:37.046156" level="INFO">Clicking element '(//button[@class='mat-focus-indicator mat-icon-button mat-button-base ng-star-inserted'])[6]'.</msg>
+<arg>${delete_button_on_customer_page}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:37.045624" elapsed="2.183774"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-21T04:26:41.231255" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-21T04:26:39.230410" elapsed="2.001219"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-21T04:26:41.232777" level="INFO">Confirming delete in popup</msg>
+<arg>Confirming delete in popup</arg>
+<arg>${log_level}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-21T04:26:41.232260" elapsed="0.000606"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Confirming delete in popup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-21T04:26:41.233134" elapsed="0.000258"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${delete_button_pop_up_yes}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:26:41.233664" elapsed="1.029552"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:42.265006" level="INFO">Clicking element '//span[text()='Yes']'.</msg>
+<arg>${delete_button_pop_up_yes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:42.264150" elapsed="2.221702"/>
+</kw>
+<doc>Delete a customer by name.</doc>
+<status status="PASS" start="2024-11-21T04:26:37.042944" elapsed="7.443381"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:26:37.041557" elapsed="7.445310"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t11" name="Tc_11 Logout" line="82">
+<kw name="Logout_option" owner="Logout_functionality">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:44.490434" level="INFO">Clicking element '(//mat-icon[@role='img'])[5]'.</msg>
+<arg>${dropdown_account_for_logout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:44.489780" elapsed="2.145594"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logout}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:26:46.636345" elapsed="1.021604"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-21T04:26:47.659663" level="INFO">Clicking element '//span[text()='Logout']'.</msg>
+<arg>${logout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T04:26:47.658852" elapsed="2.141391"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-21T04:26:49.801272" elapsed="1.034261"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:26:44.488838" elapsed="6.347120"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:26:44.487557" elapsed="6.348736"/>
+</test>
+<kw name="Closing the browser" owner="inital_setup" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-21T04:26:50.838414" elapsed="1.062531"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:26:50.837750" elapsed="1.063778"/>
+</kw>
+<status status="PASS" start="2024-11-21T04:24:45.808243" elapsed="126.093419"/>
+</suite>
+<status status="PASS" start="2024-11-21T04:24:45.806632" elapsed="126.097775"/>
+</suite>
+<status status="PASS" start="2024-11-21T04:24:45.804856" elapsed="126.101472"/>
+</suite>
+<status status="PASS" start="2024-11-21T04:24:45.802206" elapsed="126.105490"/>
+</suite>
+<status status="PASS" start="2024-11-21T04:24:45.769916" elapsed="126.138929"/>
+</suite>
+<statistics>
+<total>
+<stat pass="11" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="11" fail="0" skip="0" id="s1" name="Smartfit">Smartfit</stat>
+<stat pass="11" fail="0" skip="0" id="s1-s1" name="Smartfit">Smartfit.Smartfit</stat>
+<stat pass="11" fail="0" skip="0" id="s1-s1-s1" name="VVDN Icon">Smartfit.Smartfit.VVDN Icon</stat>
+<stat pass="11" fail="0" skip="0" id="s1-s1-s1-s1" name="TestCases">Smartfit.Smartfit.VVDN Icon.TestCases</stat>
+<stat pass="11" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="Main file">Smartfit.Smartfit.VVDN Icon.TestCases.Main file</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-11-21T04:24:45.753290" level="WARN">Error in file '/app/Smartfit/Smartfit/VVDN_Icon/TestCases/Main_file.robot' on line 9: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+</errors>
+</robot>
