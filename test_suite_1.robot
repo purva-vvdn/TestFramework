@@ -2,10 +2,12 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${URL}    https://example.com
-
+*** Keywords ***
+Open Browser To Google
+    Open Browser    https://www.google.com    chrome
 *** Test Cases ***
 Open Browser to Example
-  Open Browser    https://www.google.com    chrome
+  Open Browser To Google
   Title Should Be    Example Domain
   [Teardown]    Close Browser
 
