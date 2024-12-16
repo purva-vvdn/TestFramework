@@ -5,9 +5,9 @@ ${URL}    https://example.com
 
 *** Test Cases ***
 Open Browser to Example
-    Open Browser    https://www.google.com    chrome
-    Title Should Be    Example Domain
-    [Teardown]    Close Browser
+  Open Browser    https://www.google.com    chrome
+  Title Should Be    Example Domain
+  [Teardown]    Close Browser
 
 Verify Example Content
     [Setup]    Open Browser to Example
