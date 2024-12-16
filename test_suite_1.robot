@@ -5,7 +5,7 @@ ${URL}    https://example.com
 
 *** Test Cases ***
 Open Browser to Example
-    Open Browser    ${URL}    chrome
+    Open Browser    https://www.google.com    chrome
     Title Should Be    Example Domain
     [Teardown]    Close Browser
 
