@@ -13,5 +13,5 @@ ${SLEEP}      10
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Call Method    ${options}    add_argument    --disable-gpu
-    Open Browser    https://chromewebstore.google.com/detail/robotcorder/ifiilbfgcemdapeibjfohnfpfmfblmpd?hl=en-GB&utm_source=ext_sidebar    ${BROWSER}    options=${options}
+    Open Browser    https://chromewebstore.google.com/detail/robotcorder/ifiilbfgcemdapeibjfohnfpfmfblmpd?hl=en-GB&utm_source=ext_sidebar    ${BROWSER}    options=${options}    options=${options}
     Close Browser
